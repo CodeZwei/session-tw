@@ -6,11 +6,6 @@ Setting.addToggle("mature", {
   default: true,
 });
 
-function assetPackChangeHandler() {
-  State.setVar('$girlName', settings['Asset Pack']);
-  State.setVar('$assetPack', settings['Asset Pack']);
-}
-
 // Setting up a basic list control for the settings property 'difficulty'
 Setting.addList("Asset Pack", {
 	label    : "Choose an Asset Pack to load.",
@@ -19,3 +14,7 @@ Setting.addList("Asset Pack", {
 	onInit   : assetPackChangeHandler,
 	onChange : assetPackChangeHandler
 });
+function assetPackChangeHandler() {
+  State.setVar('$girlName', settings['Asset Pack']);
+  State.setVar('$assetPack', settings['Asset Pack']);
+}
