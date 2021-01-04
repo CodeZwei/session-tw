@@ -2,6 +2,7 @@
 
 Cum on her tits.
 
-<<Video 'cum-facial'>>
+<<set _videoLabel to either('cum-facial', 'cum-tongue')>>
+<<Video _videoLabel>>
 
 <<link 'Again?'>><<run UI.restart() >><</link>>
