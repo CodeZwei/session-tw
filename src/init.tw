@@ -1,4 +1,2 @@
 :: StoryInit
-/% Configuration %/
-<<set $assetPack to 'witch-girl'>>
-<<set $girlName to 'Sara'>>
+/% Initialize Story Variables %/
