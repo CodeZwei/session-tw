@@ -1,6 +1,6 @@
 # session-tw
 
-Short player for NSFW scenes. Build in Twine.
+Short player for NSFW scenes. Built in Twine.
 
 ## Toolchain
 
