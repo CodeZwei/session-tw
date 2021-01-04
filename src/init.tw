@@ -1,0 +1,3 @@
+:: StoryInit
+/% Configuration %/
+<<set $girlName to 'Sara'>>

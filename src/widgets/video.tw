@@ -1,0 +1,8 @@
+:: Video Widget [widget]
+<<nobr>>
+  <<widget "Video">>
+    <<if $args[0]>>
+      <<print '<video width="650" autoplay loop><source src="assets/pack/videos/' + $args[0] + '.webm" type=\'video/webm; codecs="vp8, vorbis"\'></video>'>>
+    <</if>>
+  <</widget>>
+<</nobr>>

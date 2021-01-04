@@ -1,5 +1,15 @@
 :: StoryTitle
-session-tw
+Session
+
+:: StorySubtitle
+NSWF Player
+
+:: StoryAuthor
+CodeZwei
+
+:: StoryBanner
+
+:: StoryCaption
 
 :: StoryData
 {
@@ -10,3 +20,5 @@ session-tw
 
 :: Start
 Hello World from Twine on Spindle!
+
+[[Start|Greet]]
