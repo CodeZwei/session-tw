@@ -1,10 +1,18 @@
+/% Various sex acts %/
 :: Stroke
 She strokes you.
 
 <<Video 'stroke'>>
 
-[[Tits|Tits]]
-[[Tit Fuck|Tit Fuck]]
+<<include 'Scene Footer'>>
+
+:: Blowjob
+She sucks your cock.
+
+<<set _videoLabel to either('sexo', 'sexo2', 'sexo3', 'sexo4')>>
+<<Video _videoLabel>>
+
+<<include 'Scene Footer'>>
 
 
 :: Tits
@@ -12,8 +20,7 @@ She shows her tits.
 
 <<Video 'tits'>>
 
-[[Stroke|Stroke]]
-[[Tit Fuck|Tit Fuck]]
+<<include 'Scene Footer'>>
 
 
 :: Tit Fuck
@@ -21,7 +28,24 @@ She strokes you using her tits.
 
 <<Video 'sext'>>
 
-[[Stroke|Stroke]]
-[[Tits|Tits]]
+<<include 'Scene Footer'>>
 <hr>
-[[Finish|Finish]]
+[[Finish]]
+
+
+:: Fuck
+You fuck her.
+
+<<Video 'sexv'>>
+
+<<include 'Scene Footer'>>
+<hr>
+[[Finish]]
+
+
+:: Scene Footer
+[[Stroke]]
+[[Blowjob]]
+[[Tits]]
+[[Tit Fuck]]
+[[Fuck]]

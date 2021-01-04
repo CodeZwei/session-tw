@@ -1,8 +1,8 @@
 :: Finish
 
-Cum on her tits.
+Cum on her face.
 
-<<set _videoLabel to either('cum-facial', 'cum-tongue')>>
+<<set _videoLabel to either('cum-facial')>>
 <<Video _videoLabel>>
 
 <<link 'Again?'>><<run UI.restart() >><</link>>

@@ -3,7 +3,8 @@
   /% Video Widget plays the specified video from the currently loaded asset pack %/
   <<widget "Video">>
     <<if $args[0]>>
-      <<print '<video width="650" autoplay loop><source src="../assets/packs/' + $assetPack + '/videos/' + $args[0] + '.webm" type=\'video/webm; codecs="vp8, vorbis"\'></video>'>>
+      <<set _muted to settings.muted ? 'muted ' : ' '>>
+      <<print '<video width="650" ' + _muted + 'autoplay loop><source src="../assets/packs/' + $assetPack + '/videos/' + $args[0] + '.webm" type=\'video/webm; codecs="vp8, vorbis"\'></video>'>>
     <</if>>
   <</widget>>
 <</nobr>>
