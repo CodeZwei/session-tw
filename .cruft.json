@@ -1,0 +1,16 @@
+{
+  "template": "https://github.com/brisberg/cruft-spindle-project/",
+  "commit": "b76e9641f14a75235fcc0b4771a2d64a818347b0",
+  "context": {
+    "cookiecutter": {
+      "full_name": "Code Zwei",
+      "email": "brandonzwei@gmail.com",
+      "github_username": "CodeZwei",
+      "title": "session-tw",
+      "repo_slug": "session-tw",
+      "description": "Short player for NSFW scenes. Build in Twine.",
+      "_template": "https://github.com/brisberg/cruft-spindle-project/"
+    }
+  },
+  "directory": null
+}

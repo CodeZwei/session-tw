@@ -1,0 +1,14 @@
+{
+  "name": "session-tw",
+  "version": "0.1.0",
+  "description": "Short player for NSFW scenes. Build in Twine.",
+  "scripts": {
+    "build": "yarn run spindle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Code Zwei",
+  "license": "MIT",
+  "devDependencies": {
+    "@brisberg/spindle": "^0.2.2"
+  }
+}

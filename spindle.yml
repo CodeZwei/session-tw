@@ -1,0 +1,9 @@
+id: "session-tw"
+version: "0.1.0"
+title: "session-tw"
+format: "sugarcube-2.31.1"
+description: "Short player for NSFW scenes. Build in Twine."
+header:
+  - "header/*"
+deps:
+  - "src/*"
