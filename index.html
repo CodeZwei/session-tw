@@ -137,18 +137,13 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 /* twine-user-script #2: "settings.js" */
 // Configure Settings Dialog
 Setting.addHeader("Content Settings", "Settings controlling what content is made available in the game.");
-// Setting up a basic toggle control for the settings property 'mature'
-Setting.addToggle("mature", {
-  label : "Content for mature audiences?",
-  default: true,
+
+Setting.addToggle("muted", {
+  label : "Mute all video and music",
+  default: false,
 });
 
-function assetPackChangeHandler() {
-  State.setVar('$girlName', settings['Asset Pack']);
-  State.setVar('$assetPack', settings['Asset Pack']);
-}
-
-// Setting up a basic list control for the settings property 'difficulty'
+// Setting up a basic list control for the settings property 'Asset Pack'
 Setting.addList("Asset Pack", {
 	label    : "Choose an Asset Pack to load.",
 	list     : ["Katarina", "witch-girl"],
@@ -156,11 +151,16 @@ Setting.addList("Asset Pack", {
 	onInit   : assetPackChangeHandler,
 	onChange : assetPackChangeHandler
 });
+function assetPackChangeHandler() {
+  State.setVar('$girlName', settings['Asset Pack']);
+  State.setVar('$assetPack', settings['Asset Pack']);
+}
 </script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">/% Initialize Story Variables %/</tw-passagedata><tw-passagedata pid="2" name="StorySubtitle" tags="" position="225,100" size="100,100">NSWF Player</tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="" position="350,100" size="100,100">CodeZwei</tw-passagedata><tw-passagedata pid="4" name="StoryBanner" tags="" position="475,100" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="StoryCaption" tags="" position="600,100" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="725,100" size="100,100">Hello World from Twine on Spindle!
 
-[[Start|Greet]]</tw-passagedata><tw-passagedata pid="7" name="Finish" tags="" position="850,100" size="100,100">Cum on her tits.
+[[Start|Greet]]</tw-passagedata><tw-passagedata pid="7" name="Finish" tags="" position="850,100" size="100,100">Cum on her face.
 
-&lt;&lt;Video &#39;cum-facial&#39;&gt;&gt;
+&lt;&lt;set _videoLabel to either(&#39;cum-facial&#39;)&gt;&gt;
+&lt;&lt;Video _videoLabel&gt;&gt;
 
 &lt;&lt;link &#39;Again?&#39;&gt;&gt;&lt;&lt;run UI.restart() &gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Greet" tags="" position="975,100" size="100,100">Welcome to Session, I&#39;m Tavea.
 
@@ -174,24 +174,37 @@ Looks like $girlName is ready to meet you.
 
 &lt;&lt;Video &#39;stroke&#39;&gt;&gt;
 
-[[Tits|Tits]]
-[[Tit Fuck|Tit Fuck]]</tw-passagedata><tw-passagedata pid="10" name="Tits" tags="" position="1225,100" size="100,100">She shows her tits.
+&lt;&lt;include &#39;Scene Footer&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Blowjob" tags="" position="1225,100" size="100,100">She sucks your cock.
+
+&lt;&lt;set _videoLabel to either(&#39;sexo&#39;, &#39;sexo2&#39;, &#39;sexo3&#39;, &#39;sexo4&#39;)&gt;&gt;
+&lt;&lt;Video _videoLabel&gt;&gt;
+
+&lt;&lt;include &#39;Scene Footer&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Tits" tags="" position="100,225" size="100,100">She shows her tits.
 
 &lt;&lt;Video &#39;tits&#39;&gt;&gt;
 
-[[Stroke|Stroke]]
-[[Tit Fuck|Tit Fuck]]</tw-passagedata><tw-passagedata pid="11" name="Tit Fuck" tags="" position="100,225" size="100,100">She strokes you using her tits.
+&lt;&lt;include &#39;Scene Footer&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Tit Fuck" tags="" position="225,225" size="100,100">She strokes you using her tits.
 
 &lt;&lt;Video &#39;sext&#39;&gt;&gt;
 
-[[Stroke|Stroke]]
-[[Tits|Tits]]
+&lt;&lt;include &#39;Scene Footer&#39;&gt;&gt;
 &lt;hr&gt;
-[[Finish|Finish]]</tw-passagedata><tw-passagedata pid="12" name="Video Widget" tags="widget" position="225,225" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Finish]]</tw-passagedata><tw-passagedata pid="13" name="Fuck" tags="" position="350,225" size="100,100">You fuck her.
+
+&lt;&lt;Video &#39;sexv&#39;&gt;&gt;
+
+&lt;&lt;include &#39;Scene Footer&#39;&gt;&gt;
+&lt;hr&gt;
+[[Finish]]</tw-passagedata><tw-passagedata pid="14" name="Scene Footer" tags="" position="475,225" size="100,100">[[Stroke]]
+[[Blowjob]]
+[[Tits]]
+[[Tit Fuck]]
+[[Fuck]]</tw-passagedata><tw-passagedata pid="15" name="Video Widget" tags="widget" position="600,225" size="100,100">&lt;&lt;nobr&gt;&gt;
   /% Video Widget plays the specified video from the currently loaded asset pack %/
   &lt;&lt;widget &quot;Video&quot;&gt;&gt;
     &lt;&lt;if $args[0]&gt;&gt;
-      &lt;&lt;print &#39;&lt;video width=&quot;650&quot; autoplay loop&gt;&lt;source src=&quot;../assets/packs/&#39; + $assetPack + &#39;/videos/&#39; + $args[0] + &#39;.webm&quot; type=\&#39;video/webm; codecs=&quot;vp8, vorbis&quot;\&#39;&gt;&lt;/video&gt;&#39;&gt;&gt;
+      &lt;&lt;set _muted to settings.muted ? &#39;muted &#39; : &#39; &#39;&gt;&gt;
+      &lt;&lt;print &#39;&lt;video width=&quot;650&quot; &#39; + _muted + &#39;autoplay loop&gt;&lt;source src=&quot;../assets/packs/&#39; + $assetPack + &#39;/videos/&#39; + $args[0] + &#39;.webm&quot; type=\&#39;video/webm; codecs=&quot;vp8, vorbis&quot;\&#39;&gt;&lt;/video&gt;&#39;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/widget&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata></tw-storydata>
