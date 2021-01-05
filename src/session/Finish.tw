@@ -2,7 +2,6 @@
 
 Cum on her face.
 
-<<set _videoLabel to either(setup.getCurrentAssetPack().videos['cum-facial'])>>
-<<Video _videoLabel>>
+<<Scene 'cum-facial'>>
 
 <<link 'Again?'>><<run UI.restart() >><</link>>

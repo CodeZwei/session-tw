@@ -2,15 +2,14 @@
 :: Stroke
 She strokes you.
 
-<<Video 'stroke'>>
+<<Scene 'stroke'>>
 
 <<include 'Scene Footer'>>
 
 :: Blowjob
 She sucks your cock.
 
-<<set _videoLabel to either(setup.getCurrentAssetPack().videos['sexo'])>>
-<<Video _videoLabel>>
+<<Scene 'sexo'>>
 
 <<include 'Scene Footer'>>
 
@@ -18,7 +17,7 @@ She sucks your cock.
 :: Tits
 She shows her tits.
 
-<<Video 'tits'>>
+<<Scene 'tits'>>
 
 <<include 'Scene Footer'>>
 
@@ -26,7 +25,7 @@ She shows her tits.
 :: Tit Fuck
 She strokes you using her tits.
 
-<<Video 'sext'>>
+<<Scene 'sext'>>
 
 <<include 'Scene Footer'>>
 <hr>
@@ -36,7 +35,7 @@ She strokes you using her tits.
 :: Fuck
 You fuck her.
 
-<<Video 'sexv'>>
+<<Scene 'sexv'>>
 
 <<include 'Scene Footer'>>
 <hr>

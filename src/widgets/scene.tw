@@ -1,0 +1,11 @@
+:: Scene Widget [widget]
+<<nobr>>
+  /% Scene widget takes a action name and shows a random video for that action
+
+    <<Scene 'greet'>>
+  %/
+  <<widget "Scene">>
+    <<set _videoLabel to either(setup.getCurrentAssetPack().videos[$args[0]])>>
+    <<Video _videoLabel>>
+  <</widget>>
+<</nobr>>

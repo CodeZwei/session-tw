@@ -5,7 +5,7 @@ Welcome to Session, I'm Tavea.
 Looks like $girlName is ready to meet you.
 
 <<linkappend 'Greet'>>
-  <<Video 'greet'>>
+  <<Scene 'greet'>>
 <</linkappend>>
 
 [[Get Started|Stroke]]
