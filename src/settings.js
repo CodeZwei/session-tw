@@ -9,7 +9,7 @@ Setting.addToggle("muted", {
 // Setting up a basic list control for the settings property 'Asset Pack'
 Setting.addList("Asset Pack", {
 	label    : "Choose an Asset Pack to load.",
-	list     : ["Katarina", "witch-girl"],
+	list     : listAllAssetPacks(),
   default  : "witch-girl",
 	onInit   : assetPackChangeHandler,
 	onChange : assetPackChangeHandler

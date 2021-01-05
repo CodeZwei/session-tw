@@ -9,7 +9,7 @@ She strokes you.
 :: Blowjob
 She sucks your cock.
 
-<<set _videoLabel to either('sexo', 'sexo2', 'sexo3', 'sexo4')>>
+<<set _videoLabel to either(setup.getCurrentAssetPack().videos['sexo'])>>
 <<Video _videoLabel>>
 
 <<include 'Scene Footer'>>

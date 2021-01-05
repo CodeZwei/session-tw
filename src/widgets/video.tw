@@ -2,9 +2,18 @@
 <<nobr>>
   /% Video Widget plays the specified video from the currently loaded asset pack %/
   <<widget "Video">>
+    <<set _src to `../assets/packs/${State.getVar('$assetPack')}/videos/${$args[0]}.webm`>>
+    <<RawVideo _src settings.muted>>
+  <</widget>>
+
+  /% RawVideo Widget plays an autoplay, looped video from the specified URL
+
+    <<RawVideo [src] [muted?]>>
+  %/
+  <<widget "RawVideo">>
     <<if $args[0]>>
-      <<set _muted to settings.muted ? 'muted ' : ' '>>
-      <<print '<video width="650" ' + _muted + 'autoplay loop><source src="../assets/packs/' + $assetPack + '/videos/' + $args[0] + '.webm" type=\'video/webm; codecs="vp8, vorbis"\'></video>'>>
+      <<set _muted to $args[1] ? 'muted ' : ' '>>
+      <<print '<video width="650" ' + _muted + 'autoplay loop><source src="' + $args[0] + '" type=\'video/webm; codecs="vp8, vorbis"\'></video>'>>
     <</if>>
   <</widget>>
 <</nobr>>

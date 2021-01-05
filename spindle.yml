@@ -6,5 +6,6 @@ description: "Short player for NSFW scenes. Build in Twine."
 header:
   - "header/*"
 deps:
+  - "src/js/*"
+  - "assets/**/*/manifest.tw"
   - "src/*"
-  - "assets/**/*/manifest.js"
